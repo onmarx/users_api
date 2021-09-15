@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Api</title>
+</head>
+<body>
+  <nav class="bar">
+    <div class="container">
+      <h2>User Api width Ajax</h2>
+    </div>
+  </nav>
+  <!-- content -->
+  <main class="container">
+    <p>Click the button to show data</p>
+    <button id="btn">show data</button>
+    <div class="searchContainer">
+      <input type="text" placeholder="seach data" class="search" onkeyup="filterTable()">
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Email</th>
+          <th>Gender</th>
+          <th>photo</th>
+        </tr>
+      </thead>
+      <tbody class="response"></tbody>
+    </table>
+    <p id="founder"></p>
+  </main>
+  <script>
+    filterTable = () => {
+      let filter = document.querySelector('input').value.toUpperCase();
+      let table = document.querySelector("table");
+      let tr = table.getElementsByTagName("tr");
+      let p = document.getElementById("founder");
+      for (var i = 0; i < tr.length; i++) {
+        var td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          var text = td.innerText || td.textContent;
+          if (text.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    };
+  </script>
+</body>
+</html>

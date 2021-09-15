@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato';
+}
+.bar {
+  background-color: #999;
+  color: white;
+  text-align: center;
+}
+.bar h2 {
+  font-size: 22px;
+  padding: 5px 0;
+}
+.container {
+  margin: 0 auto;
+  width: 95%;
+}
+img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  .container{
+    max-width: 768px;
+  }
+}
+
+main p {
+  margin: 10px 0;
+}
+main button {
+  padding: 5px 16px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  background-color: #095574;
+  color: white;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0px 0 10px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: center;
+}
+
+tr:nth-child(even){
+  background-color: #ddd;
+}
+
+@media (max-width: 500px) {
+  th, td {
+    display: block;
+  border: 1px solid #fff;
+
+  }
+  thead {
+    display: none;
+  }
+  .table tr {
+    display: table;
+    margin: 5px 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  tr:nth-child(even){
+    background-color: #fff;
+  }
+}
+.searchContainer {
+  margin: 10px 0;
+}
+.searchContainer input {
+  width: 100%;
+  padding: 10px 15px;
+}
+input {
+  display: none;
+}
+input.active {
+  display: block;
+  margin-bottom: 20px;
+
+}
+
+#founder {
+  text-align: center;
+  display: block;
+  font-size: 1.2rem;
+}
