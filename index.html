@@ -32,7 +32,7 @@
       </thead>
       <tbody class="response"></tbody>
     </table>
-    <p id="founder"></p>
+    <p id="founder">Not Found</p>
   </main>
   <script>
     filterTable = () => {
@@ -40,6 +40,7 @@
       let table = document.querySelector("table");
       let tr = table.getElementsByTagName("tr");
       let p = document.getElementById("founder");
+      p.classList.remove('active')
       for (var i = 0; i < tr.length; i++) {
         var td = tr[i].getElementsByTagName("td")[0];
         if (td) {
@@ -48,7 +49,9 @@
             tr[i].style.display = "";
           } else {
             tr[i].style.display = "none";
+            p.classList.add('active')
           }
+
         }
       }
     };
